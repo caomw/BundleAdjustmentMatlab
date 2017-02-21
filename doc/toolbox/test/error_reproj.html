@@ -1,0 +1,60 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+                "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head>
+  <title>Description of error_reproj</title>
+  <meta name="keywords" content="error_reproj">
+  <meta name="description" content="ERROR_REPROJ computes the reprojection error given K, w, T and X">
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <meta name="generator" content="m2html &copy; 2003 Guillaume Flandin">
+  <meta name="robots" content="index, follow">
+  <link type="text/css" rel="stylesheet" href="../../m2html.css">
+</head>
+<body>
+<a name="_top"></a>
+<div><a href="../../index.html">Home</a> &gt;  <a href="../index.html">toolbox</a> &gt; <a href="index.html">test</a> &gt; error_reproj.m</div>
+
+<!--<table width="100%"><tr><td align="left"><a href="../../index.html"><img alt="<" border="0" src="../../left.png">&nbsp;Master index</a></td>
+<td align="right"><a href="index.html">Index for toolbox\test&nbsp;<img alt=">" border="0" src="../../right.png"></a></td></tr></table>-->
+
+<h1>error_reproj
+</h1>
+
+<h2><a name="_name"></a>PURPOSE <a href="#_top"><img alt="^" border="0" src="../../up.png"></a></h2>
+<div class="box"><strong>ERROR_REPROJ computes the reprojection error given K, w, T and X</strong></div>
+
+<h2><a name="_synopsis"></a>SYNOPSIS <a href="#_top"><img alt="^" border="0" src="../../up.png"></a></h2>
+<div class="box"><strong>function [err error] = error_reproj( x, K, T, w, X, varargin ) </strong></div>
+
+<h2><a name="_description"></a>DESCRIPTION <a href="#_top"><img alt="^" border="0" src="../../up.png"></a></h2>
+<div class="fragment"><pre class="comment"> ERROR_REPROJ computes the reprojection error given K, w, T and X
+
+ Input:
+       x = measurements (3-by-n-by-m)
+       K = calibration matrix or parameters (3-by-3 or 3-by-3-by-m or 4-by-m )
+       T = translation parameters (3-by-m)
+       w = exponential map parameters (3-by-m)
+       X = points in 3D (4-by-n)
+
+ Options:
+        'visibility', vis : visibility map (nxm)
+
+ Output:
+        err   = scalar value of the average reprojection error
+        error = n-by-m matrix of the reprojection error</pre></div>
+
+<!-- crossreference -->
+<h2><a name="_cross"></a>CROSS-REFERENCE INFORMATION <a href="#_top"><img alt="^" border="0" src="../../up.png"></a></h2>
+This function calls:
+<ul style="list-style-image:url(../../matlabicon.gif)">
+<li><a href="../../toolbox/geometry/calibration_matrix.html" class="code" title="function K = calibration_matrix( Kparam )">calibration_matrix</a>	CALIBRATION_MATRIX returns a 3x3 calibration matrix from parameters.</li></ul>
+This function is called by:
+<ul style="list-style-image:url(../../matlabicon.gif)">
+<li><a href="../../toolbox/geometry/mview_reconstruction.html" class="code" title="function [ K T Omega X vis ] = mview_reconstruction( featx, featy, varargin )">mview_reconstruction</a>	MVIEW_RECONSTRUCTION performs multi-view reconstruction.</li><li><a href="test_incremental.html" class="code" title="">test_incremental</a>	TEST_INCREMENTAL tests Euclidean reconstruction using incremental bundle adjustment.</li><li><a href="test_mview.html" class="code" title="">test_mview</a>	TEST_MVIEW tests Euclidean 3D reconstruction using multi-view algorithm.</li></ul>
+<!-- crossreference -->
+
+
+
+<hr><address>Generated on Tue 24-Nov-2009 02:34:47 by <strong><a href="http://www.artefact.tk/software/matlab/m2html/">m2html</a></strong> &copy; 2003</address>
+</body>
+</html>

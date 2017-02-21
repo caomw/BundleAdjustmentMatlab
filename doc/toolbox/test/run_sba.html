@@ -1,0 +1,66 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+                "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head>
+  <title>Description of run_sba</title>
+  <meta name="keywords" content="run_sba">
+  <meta name="description" content="RUN_SBA revokes SBA library's bundle adjustment function.">
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <meta name="generator" content="m2html &copy; 2003 Guillaume Flandin">
+  <meta name="robots" content="index, follow">
+  <link type="text/css" rel="stylesheet" href="../../m2html.css">
+</head>
+<body>
+<a name="_top"></a>
+<div><a href="../../index.html">Home</a> &gt;  <a href="../index.html">toolbox</a> &gt; <a href="index.html">test</a> &gt; run_sba.m</div>
+
+<!--<table width="100%"><tr><td align="left"><a href="../../index.html"><img alt="<" border="0" src="../../left.png">&nbsp;Master index</a></td>
+<td align="right"><a href="index.html">Index for toolbox\test&nbsp;<img alt=">" border="0" src="../../right.png"></a></td></tr></table>-->
+
+<h1>run_sba
+</h1>
+
+<h2><a name="_name"></a>PURPOSE <a href="#_top"><img alt="^" border="0" src="../../up.png"></a></h2>
+<div class="box"><strong>RUN_SBA revokes SBA library's bundle adjustment function.</strong></div>
+
+<h2><a name="_synopsis"></a>SYNOPSIS <a href="#_top"><img alt="^" border="0" src="../../up.png"></a></h2>
+<div class="box"><strong>function [ T_ w_ X_ info ] = run_sba( K, T, w, X, x, vis, method, projac_lib ) </strong></div>
+
+<h2><a name="_description"></a>DESCRIPTION <a href="#_top"><img alt="^" border="0" src="../../up.png"></a></h2>
+<div class="fragment"><pre class="comment"> RUN_SBA revokes SBA library's bundle adjustment function.
+
+ Input:
+       K - camera calibration parameters (4xm)
+       T - camera translation            (3xm)
+       w - camera rotation               (3xm)
+       X - 3d location of points         (4xn)
+       x - image points                  (3xnxm)
+       vis - visibility map              (nxm)
+       method - method of sba optimization ('mot', 'str', or 'motstr')
+       projac_lib - path of projac.dll file
+                    (e.g. '/library/sba-1.4/matlab/projac.dll')
+
+ Output:
+       T_ - refined translation
+       w_ - refined rotation
+       X_ - refined 3d location of points
+       info - information from sba()
+
+ NOTE: This function is provided for test purpose of SBA library, which
+ can be acquired from http://www.ics.forth.gr/~lourakis/sba/</pre></div>
+
+<!-- crossreference -->
+<h2><a name="_cross"></a>CROSS-REFERENCE INFORMATION <a href="#_top"><img alt="^" border="0" src="../../up.png"></a></h2>
+This function calls:
+<ul style="list-style-image:url(../../matlabicon.gif)">
+<li><a href="../../toolbox/geometry/iquat.html" class="code" title="function q = iquat( R )">iquat</a>	IQUAT computes a quaternion from a rotation matrix R</li><li><a href="../../toolbox/geometry/quat.html" class="code" title="function R = quat( q )">quat</a>	QUAT converts a quaternion to a rotation matrix</li></ul>
+This function is called by:
+<ul style="list-style-image:url(../../matlabicon.gif)">
+<li><a href="test_bundle.html" class="code" title="">test_bundle</a>	TEST_BUNDLE tests multiple number of tests on bundle adjustment.</li></ul>
+<!-- crossreference -->
+
+
+
+<hr><address>Generated on Tue 24-Nov-2009 02:34:47 by <strong><a href="http://www.artefact.tk/software/matlab/m2html/">m2html</a></strong> &copy; 2003</address>
+</body>
+</html>

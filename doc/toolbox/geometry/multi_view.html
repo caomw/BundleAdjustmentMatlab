@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+                "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head>
+  <title>Description of multi_view</title>
+  <meta name="keywords" content="multi_view">
+  <meta name="description" content="MULTI_VIEW performs multi-view projective reconstruction.">
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <meta name="generator" content="m2html &copy; 2003 Guillaume Flandin">
+  <meta name="robots" content="index, follow">
+  <link type="text/css" rel="stylesheet" href="../../m2html.css">
+</head>
+<body>
+<a name="_top"></a>
+<div><a href="../../index.html">Home</a> &gt;  <a href="../index.html">toolbox</a> &gt; <a href="index.html">geometry</a> &gt; multi_view.m</div>
+
+<!--<table width="100%"><tr><td align="left"><a href="../../index.html"><img alt="<" border="0" src="../../left.png">&nbsp;Master index</a></td>
+<td align="right"><a href="index.html">Index for toolbox\geometry&nbsp;<img alt=">" border="0" src="../../right.png"></a></td></tr></table>-->
+
+<h1>multi_view
+</h1>
+
+<h2><a name="_name"></a>PURPOSE <a href="#_top"><img alt="^" border="0" src="../../up.png"></a></h2>
+<div class="box"><strong>MULTI_VIEW performs multi-view projective reconstruction.</strong></div>
+
+<h2><a name="_synopsis"></a>SYNOPSIS <a href="#_top"><img alt="^" border="0" src="../../up.png"></a></h2>
+<div class="box"><strong>function [ Xp Pp x_ vis ] = multi_view( x, depth, varargin ) </strong></div>
+
+<h2><a name="_description"></a>DESCRIPTION <a href="#_top"><img alt="^" border="0" src="../../up.png"></a></h2>
+<div class="fragment"><pre class="comment"> MULTI_VIEW performs multi-view projective reconstruction.
+
+ Input:
+        x     - image points (3xnxm)
+        depth - initial depths of points from two-view (1xn)
+
+ Options:
+        'K', K            - calibration matrix (3x3)
+        'calibrated'      - indicates the camera is calibrated
+        'visibility', vis - visibility map     (nxm)
+        'visualize'       - visualize intermediate reconstruction status
+
+ Output:
+        Xp  - 3d locations of points  (4xn)
+        Pp  - projection matrices     (3x4xm)
+        x_  - normalized image points (3xnxm)
+        vis - updated visibility map  (nxm)
+
+ NOTE: We assume tvl_hat the points in the first image are never outliers.</pre></div>
+
+<!-- crossreference -->
+<h2><a name="_cross"></a>CROSS-REFERENCE INFORMATION <a href="#_top"><img alt="^" border="0" src="../../up.png"></a></h2>
+This function calls:
+<ul style="list-style-image:url(../../matlabicon.gif)">
+<li><a href="../../toolbox/bundle/bundle_euclid.html" class="code" title="function [K_ Te_ w_ Xe_ error_] = bundle_euclid( K, Te, w, Xe, x, varargin )">bundle_euclid</a>	BUNDLE_EUCLID  performs the Euclidean sparse bundle adjustment.</li><li><a href="../../toolbox/bundle/bundle_projective.html" class="code" title="function [Pp_ Xp_ error_] = bundle_projective( Pp, Xp, x, varargin )">bundle_projective</a>	BUNDLE_PROJECTIVE performs the projective bundle adjustment.</li></ul>
+This function is called by:
+<ul style="list-style-image:url(../../matlabicon.gif)">
+<li><a href="mview_reconstruction.html" class="code" title="function [ K T Omega X vis ] = mview_reconstruction( featx, featy, varargin )">mview_reconstruction</a>	MVIEW_RECONSTRUCTION performs multi-view reconstruction.</li></ul>
+<!-- crossreference -->
+
+
+
+<hr><address>Generated on Tue 24-Nov-2009 02:34:47 by <strong><a href="http://www.artefact.tk/software/matlab/m2html/">m2html</a></strong> &copy; 2003</address>
+</body>
+</html>

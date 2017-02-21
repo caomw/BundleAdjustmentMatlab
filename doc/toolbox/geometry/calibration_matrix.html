@@ -1,0 +1,46 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+                "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head>
+  <title>Description of calibration_matrix</title>
+  <meta name="keywords" content="calibration_matrix">
+  <meta name="description" content="CALIBRATION_MATRIX returns a 3x3 calibration matrix from parameters.">
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <meta name="generator" content="m2html &copy; 2003 Guillaume Flandin">
+  <meta name="robots" content="index, follow">
+  <link type="text/css" rel="stylesheet" href="../../m2html.css">
+</head>
+<body>
+<a name="_top"></a>
+<div><a href="../../index.html">Home</a> &gt;  <a href="../index.html">toolbox</a> &gt; <a href="index.html">geometry</a> &gt; calibration_matrix.m</div>
+
+<!--<table width="100%"><tr><td align="left"><a href="../../index.html"><img alt="<" border="0" src="../../left.png">&nbsp;Master index</a></td>
+<td align="right"><a href="index.html">Index for toolbox\geometry&nbsp;<img alt=">" border="0" src="../../right.png"></a></td></tr></table>-->
+
+<h1>calibration_matrix
+</h1>
+
+<h2><a name="_name"></a>PURPOSE <a href="#_top"><img alt="^" border="0" src="../../up.png"></a></h2>
+<div class="box"><strong>CALIBRATION_MATRIX returns a 3x3 calibration matrix from parameters.</strong></div>
+
+<h2><a name="_synopsis"></a>SYNOPSIS <a href="#_top"><img alt="^" border="0" src="../../up.png"></a></h2>
+<div class="box"><strong>function K = calibration_matrix( Kparam ) </strong></div>
+
+<h2><a name="_description"></a>DESCRIPTION <a href="#_top"><img alt="^" border="0" src="../../up.png"></a></h2>
+<div class="fragment"><pre class="comment"> CALIBRATION_MATRIX returns a 3x3 calibration matrix from parameters.</pre></div>
+
+<!-- crossreference -->
+<h2><a name="_cross"></a>CROSS-REFERENCE INFORMATION <a href="#_top"><img alt="^" border="0" src="../../up.png"></a></h2>
+This function calls:
+<ul style="list-style-image:url(../../matlabicon.gif)">
+</ul>
+This function is called by:
+<ul style="list-style-image:url(../../matlabicon.gif)">
+<li><a href="../../toolbox/bundle/reprojection_point.html" class="code" title="function [x] = reprojection_point( Kparam, a, b, num_variableK )">reprojection_point</a>	REPROJECTION_POINT reprojects a point given camera and point parameters.</li><li><a href="estimate_camera.html" class="code" title="function [ K T Omega inlier ] = estimate_camera( x, X, varargin )">estimate_camera</a>	ESTIMATE_CAMERA estimates the camera parameters.</li><li><a href="estimate_camera_DLT.html" class="code" title="function [ K T Omega ] = estimate_camera_DLT( x, X, varargin )">estimate_camera_DLT</a>	ESTIMATE_CAMERA_DLT estimates the camera parameters by DLT algorithm.</li><li><a href="incr_reconstruction.html" class="code" title="function [ K T Omega X goodfeat status ] = incr_reconstruction( featx, featy, varargin )">incr_reconstruction</a>	INCR_RECONSTRUCTION performs incremental reconstruction.</li><li><a href="triangulation.html" class="code" title="function [ X ] = triangulation( K, T, Omega, x )">triangulation</a>	TRIANGULATION computes a 3D location of a point from more than two views.</li><li><a href="../../toolbox/test/error_reproj.html" class="code" title="function [err error] = error_reproj( x, K, T, w, X, varargin )">error_reproj</a>	ERROR_REPROJ computes the reprojection error given K, w, T and X</li><li><a href="../../toolbox/test/generate_scene_and_motion.html" class="code" title="function [K T w X x vis] = generate_scene_and_motion( m, min_n, max_n, depth )">generate_scene_and_motion</a>	GENERATE_SCENE_AND_MOTION generates a synthetic scene and camera motion.</li><li><a href="../../toolbox/test/test_mview.html" class="code" title="">test_mview</a>	TEST_MVIEW tests Euclidean 3D reconstruction using multi-view algorithm.</li><li><a href="../../toolbox/visualization/display_cameras.html" class="code" title="function display_cameras( T, Omega, K, varargin )">display_cameras</a>	DISPLAY_CAMERAS displays camera trajectory and view frustum.</li></ul>
+<!-- crossreference -->
+
+
+
+<hr><address>Generated on Tue 24-Nov-2009 02:34:47 by <strong><a href="http://www.artefact.tk/software/matlab/m2html/">m2html</a></strong> &copy; 2003</address>
+</body>
+</html>

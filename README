@@ -1,0 +1,51 @@
+                          Vision Lab Geometry Library
+                                      --
+                                  Taehee Lee
+
+INSTALLING
+  Since this program is relying on some files of Vision Lab Feature Library
+(VLFeat), please copy the vlg directory to the same place with vlfeat:
+for example,
+               /lib/
+               /lib/vlfeat/
+               /lib/vlg/
+
+
+COMPILING
+  VLG requires VLFeat installed and compiled ahead. The compiling process is
+as same as compiling VLFeat. Please compile VLFeat first, and do the same thing
+for VLG.
+
+
+RUNNING
+  As you set the Matlab path for VLFeat, do the similar thing for VLG:
+
+  >> cd vlg/toolbox;
+  >> vlg_setup;
+
+  Then you can run test scripts for your first step:
+
+  >> test_mview
+
+  or
+
+  >> test_incremental
+
+  or
+
+  >> demo_vlmvg
+
+
+DOCUMENTATION
+  Matlab functions have their help documentations within themselves. If you
+want to read the Matlab documentation together, check the html documents:
+
+  vlg/doc/index.html
+
+
+COPYRIGHT
+  Copyright 2008 (C) Taehee Lee
+
+  This program is part of VLG, available in the terms of the GNU
+  General Public Licenseversion 2.
+

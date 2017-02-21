@@ -1,0 +1,63 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+                "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head>
+  <title>Description of estimate_camera_DLT</title>
+  <meta name="keywords" content="estimate_camera_DLT">
+  <meta name="description" content="ESTIMATE_CAMERA_DLT estimates the camera parameters by DLT algorithm.">
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <meta name="generator" content="m2html &copy; 2003 Guillaume Flandin">
+  <meta name="robots" content="index, follow">
+  <link type="text/css" rel="stylesheet" href="../../m2html.css">
+</head>
+<body>
+<a name="_top"></a>
+<div><a href="../../index.html">Home</a> &gt;  <a href="../index.html">toolbox</a> &gt; <a href="index.html">geometry</a> &gt; estimate_camera_DLT.m</div>
+
+<!--<table width="100%"><tr><td align="left"><a href="../../index.html"><img alt="<" border="0" src="../../left.png">&nbsp;Master index</a></td>
+<td align="right"><a href="index.html">Index for toolbox\geometry&nbsp;<img alt=">" border="0" src="../../right.png"></a></td></tr></table>-->
+
+<h1>estimate_camera_DLT
+</h1>
+
+<h2><a name="_name"></a>PURPOSE <a href="#_top"><img alt="^" border="0" src="../../up.png"></a></h2>
+<div class="box"><strong>ESTIMATE_CAMERA_DLT estimates the camera parameters by DLT algorithm.</strong></div>
+
+<h2><a name="_synopsis"></a>SYNOPSIS <a href="#_top"><img alt="^" border="0" src="../../up.png"></a></h2>
+<div class="box"><strong>function [ K T Omega ] = estimate_camera_DLT( x, X, varargin ) </strong></div>
+
+<h2><a name="_description"></a>DESCRIPTION <a href="#_top"><img alt="^" border="0" src="../../up.png"></a></h2>
+<div class="fragment"><pre class="comment"> ESTIMATE_CAMERA_DLT estimates the camera parameters by DLT algorithm.
+
+ This performs the direct linear transform (DLT) given the set of image
+ points x with respect to the corresponding 3D points X.
+
+ x ~ K [ R | T ] X
+
+ input:
+        x = image points (3xn in image plane)
+        X = 3d points (4xn)
+
+ Options:
+        'K', K - calibration parameters (4x1) or matrix (3x3)
+
+ output:
+        K     - intrinsic camera parameters              (4x1)
+        T     - extrinsic camera parameter (translation) (3x1)
+        Omega - extrinsic camera parameter (rotation)    (3x1)</pre></div>
+
+<!-- crossreference -->
+<h2><a name="_cross"></a>CROSS-REFERENCE INFORMATION <a href="#_top"><img alt="^" border="0" src="../../up.png"></a></h2>
+This function calls:
+<ul style="list-style-image:url(../../matlabicon.gif)">
+<li><a href="calibration_matrix.html" class="code" title="function K = calibration_matrix( Kparam )">calibration_matrix</a>	CALIBRATION_MATRIX returns a 3x3 calibration matrix from parameters.</li><li><a href="calibration_parameter.html" class="code" title="function Kparam = calibration_parameter( K )">calibration_parameter</a>	CALIBRATION_PARAMETER returns calibration parameters (4x1) from a matrix.</li><li><a href="rq.html" class="code" title="function [r q] = rq( A )">rq</a>	RQ performs RQ-decomposition of A.</li></ul>
+This function is called by:
+<ul style="list-style-image:url(../../matlabicon.gif)">
+</ul>
+<!-- crossreference -->
+
+
+
+<hr><address>Generated on Tue 24-Nov-2009 02:34:47 by <strong><a href="http://www.artefact.tk/software/matlab/m2html/">m2html</a></strong> &copy; 2003</address>
+</body>
+</html>

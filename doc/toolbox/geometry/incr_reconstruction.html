@@ -1,0 +1,69 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+                "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head>
+  <title>Description of incr_reconstruction</title>
+  <meta name="keywords" content="incr_reconstruction">
+  <meta name="description" content="INCR_RECONSTRUCTION performs incremental reconstruction.">
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <meta name="generator" content="m2html &copy; 2003 Guillaume Flandin">
+  <meta name="robots" content="index, follow">
+  <link type="text/css" rel="stylesheet" href="../../m2html.css">
+</head>
+<body>
+<a name="_top"></a>
+<div><a href="../../index.html">Home</a> &gt;  <a href="../index.html">toolbox</a> &gt; <a href="index.html">geometry</a> &gt; incr_reconstruction.m</div>
+
+<!--<table width="100%"><tr><td align="left"><a href="../../index.html"><img alt="<" border="0" src="../../left.png">&nbsp;Master index</a></td>
+<td align="right"><a href="index.html">Index for toolbox\geometry&nbsp;<img alt=">" border="0" src="../../right.png"></a></td></tr></table>-->
+
+<h1>incr_reconstruction
+</h1>
+
+<h2><a name="_name"></a>PURPOSE <a href="#_top"><img alt="^" border="0" src="../../up.png"></a></h2>
+<div class="box"><strong>INCR_RECONSTRUCTION performs incremental reconstruction.</strong></div>
+
+<h2><a name="_synopsis"></a>SYNOPSIS <a href="#_top"><img alt="^" border="0" src="../../up.png"></a></h2>
+<div class="box"><strong>function [ K T Omega X goodfeat status ] = incr_reconstruction( featx, featy, varargin ) </strong></div>
+
+<h2><a name="_description"></a>DESCRIPTION <a href="#_top"><img alt="^" border="0" src="../../up.png"></a></h2>
+<div class="fragment"><pre class="comment"> INCR_RECONSTRUCTION performs incremental reconstruction.
+
+ Input:
+        featx - image points x-coordinates (nxm)
+        featy - image points y-coordinates (nxm)
+
+ Options:
+        'visibility', vis          - visibility map (nxm)
+        'calibrated'               - indicate that camera is calibrated
+        'K', K (3x3) or (4xm)      - provide a calibration matrix either
+                                     calibration or guessed
+        'initialized', T, Omega, X - provide initial reconstruction for
+                                     the bundle adjustment
+        'status', status           - provide the status of initialized
+                                     frames (1xm logical)
+        'X', X (4xn)               - provide initial points reconstruction
+
+ Output:
+        K     - calibration parameters     (4xm)
+        T     - translation                (3xm)
+        Omega - rotation                   (3xm)
+        X     - 3D points                  (4xn) in homogeneous form
+        goodfeat - status of image points  (nxm)
+        status   - status of frames        (1xm) logical</pre></div>
+
+<!-- crossreference -->
+<h2><a name="_cross"></a>CROSS-REFERENCE INFORMATION <a href="#_top"><img alt="^" border="0" src="../../up.png"></a></h2>
+This function calls:
+<ul style="list-style-image:url(../../matlabicon.gif)">
+<li><a href="../../toolbox/bundle/bundle_euclid.html" class="code" title="function [K_ Te_ w_ Xe_ error_] = bundle_euclid( K, Te, w, Xe, x, varargin )">bundle_euclid</a>	BUNDLE_EUCLID  performs the Euclidean sparse bundle adjustment.</li><li><a href="align_scene.html" class="code" title="function [ T_ Omega_ X_ ] = align_scene( T, Omega, X, TRef, OmegaRef, XRef, ScaleOption )">align_scene</a>	ALIGN_SCENE aligns a scene.</li><li><a href="calibration_matrix.html" class="code" title="function K = calibration_matrix( Kparam )">calibration_matrix</a>	CALIBRATION_MATRIX returns a 3x3 calibration matrix from parameters.</li><li><a href="calibration_parameter.html" class="code" title="function Kparam = calibration_parameter( K )">calibration_parameter</a>	CALIBRATION_PARAMETER returns calibration parameters (4x1) from a matrix.</li><li><a href="estimate_camera.html" class="code" title="function [ K T Omega inlier ] = estimate_camera( x, X, varargin )">estimate_camera</a>	ESTIMATE_CAMERA estimates the camera parameters.</li><li><a href="triangulation.html" class="code" title="function [ X ] = triangulation( K, T, Omega, x )">triangulation</a>	TRIANGULATION computes a 3D location of a point from more than two views.</li><li><a href="two_view.html" class="code" title="function [ X lambda R T F error ] = two_view( x1, x2, varargin )">two_view</a>	TWO_VIEW performs a two-view projective reconstruction algorithm.</li><li><a href="../../toolbox/visualization/display_cameras.html" class="code" title="function display_cameras( T, Omega, K, varargin )">display_cameras</a>	DISPLAY_CAMERAS displays camera trajectory and view frustum.</li><li><a href="../../toolbox/visualization/display_points.html" class="code" title="function display_points( X, varargin )">display_points</a>	DISPLAY_POINTS displays 3D points.</li></ul>
+This function is called by:
+<ul style="list-style-image:url(../../matlabicon.gif)">
+<li><a href="VLmvg.html" class="code" title="function [ K_ T_ Omega_ X_ vis_ inlier_ ] = VLmvg( featx, featy, varargin )">VLmvg</a>	VLMVG reconstructs structure and motion from feature measurements.</li></ul>
+<!-- crossreference -->
+
+
+
+<hr><address>Generated on Tue 24-Nov-2009 02:34:47 by <strong><a href="http://www.artefact.tk/software/matlab/m2html/">m2html</a></strong> &copy; 2003</address>
+</body>
+</html>
