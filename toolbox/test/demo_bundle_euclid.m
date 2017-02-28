@@ -6,6 +6,9 @@
 % General Public Licenseversion 2.
 
 % setup parameters
+clc; clear
+close all
+
 num_frame = 60;
 min_feature = 50;
 max_feature = 100;
