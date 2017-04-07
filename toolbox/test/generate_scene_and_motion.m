@@ -46,7 +46,7 @@ vel_T = zeros(3,1);
 for j=2:m
     acc_w = 1e-2*randn(3,1);    % random rotational acceleration model
     acc_T = 1e-0*randn(3,1);    % random translational acceleration model
-    vel_w = vel_w + acc_w;
+    vel_w = vel_w + acc_w;      % In here, translational means T = -R*C_tilt, not really translation C
     vel_T = vel_T + acc_T;
     w(:,j) = w(:,j-1) + vel_w;
     T(:,j) = T(:,j-1) + vel_T;
@@ -100,7 +100,7 @@ for j=1:m
         n_new = max_n - n_tracked;
         % generate features in the current image plane
         xi = rand(2,n_new) .* repmat([ width height ]', 1, n_new);
-        d  = (1 + 0.5 * randn(1,n_new))  * depth;
+        d  = (1 + 0.5 * randn(1,n_new))  * depth;       %depth is the Z coordinate
         % then compute the 3d locations
         K_inv = pinv( calibration_matrix(K(:,j)) );
         for i = 1:n_new
